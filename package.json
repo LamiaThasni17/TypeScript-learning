@@ -7,17 +7,23 @@
 	"scripts": {
 		"prepare": "husky install",
 		"commit": "cz",
-		"format": "prettier --write . --ignore-unknown"
+		"format": "prettier --write . --ignore-unknown",
+		"build": "tsc",
+		"start": "node dist",
+		"dev": "ts-node src/index.ts"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^16.2.3",
 		"@commitlint/config-conventional": "^16.2.1",
+		"@types/number-to-words": "^1.2.1",
 		"commitizen": "^4.2.4",
 		"commitlint": "^16.2.3",
 		"cz-conventional-changelog": "3.3.0",
 		"husky": "^7.0.4",
 		"lint-staged": "^12.4.0",
+		"nodemon": "^2.0.15",
 		"prettier": "^2.6.2",
+		"ts-node": "^10.7.0",
 		"typescript": "^4.6.3"
 	},
 	"config": {
@@ -27,5 +33,8 @@
 	},
 	"lint-staged": {
 		"**/*": "prettier --write --ignore-unknown"
+	},
+	"dependencies": {
+		"number-to-words": "^1.2.4"
 	}
 }
